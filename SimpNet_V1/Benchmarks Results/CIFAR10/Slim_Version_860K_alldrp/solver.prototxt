@@ -1,0 +1,27 @@
+test_iter: 100
+test_interval: 500
+base_lr: 0.1
+display: 100
+max_iter: 400000
+lr_policy: "multistep"
+gamma: 0.1
+momentum: 0.9
+weight_decay: 0.005
+snapshot: 500
+snapshot_prefix: "examples/cifar10_slim_860k"
+solver_mode: GPU
+device_id: 0
+random_seed: 1705
+net: "examples/cifar10/train_test.prototxt"
+train_state {
+  level: 0
+  stage: ""
+}
+delta: 0.001
+stepvalue: 50000
+stepvalue: 95000
+stepvalue: 220000
+stepvalue: 295000
+stepvalue: 320000
+stepvalue: 270000
+type: "AdaDelta"
