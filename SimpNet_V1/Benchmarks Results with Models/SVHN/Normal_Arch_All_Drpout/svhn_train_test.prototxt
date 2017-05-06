@@ -52,11 +52,12 @@ layer {
     }
   }
 }
+
 layer {
   name: "bn1"
   type: "BatchNorm"
   bottom: "conv1"
-  top: "bn1"
+  top: "conv1"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -81,7 +82,7 @@ layer {
   name: "bn1"
   type: "BatchNorm"
   bottom: "conv1"
-  top: "bn1"
+  top: "conv1"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -105,8 +106,8 @@ layer {
 layer {
   name: "scale1"
   type: "Scale"
-  bottom: "bn1"
-  top: "scale1"
+  bottom: "conv1"
+  top: "conv1"
   scale_param {
     bias_term: true
   }
@@ -115,15 +116,15 @@ layer {
 layer {
   name: "relu1"
   type: "ReLU"
-  bottom: "scale1"
-  top: "relu1"
+  bottom: "conv1"
+  top: "conv1"
 }
 #######DropOut##########
 layer {
  name: "drop2_1"
  type: "Dropout"
- bottom: "relu1"
- top: "relu1"
+ bottom: "conv1"
+ top: "conv1"
  dropout_param {
   dropout_ratio: 0.2
   }
@@ -132,7 +133,7 @@ layer {
 layer {
   name: "conv1_0"
   type: "Convolution"
-  bottom: "relu1"
+  bottom: "conv1"
   top: "conv1_0"
   param {
     lr_mult: 1
@@ -152,7 +153,7 @@ layer {
   name: "bn1_0"
   type: "BatchNorm"
   bottom: "conv1_0"
-  top: "bn1_0"
+  top: "conv1_0"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -177,7 +178,7 @@ layer {
   name: "bn1_0"
   type: "BatchNorm"
   bottom: "conv1_0"
-  top: "bn1_0"
+  top: "conv1_0"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -201,8 +202,8 @@ layer {
 layer {
   name: "scale1_0"
   type: "Scale"
-  bottom: "bn1_0"
-  top: "scale1_0"
+  bottom: "conv1_0"
+  top: "conv1_0"
   scale_param {
     bias_term: true
   }
@@ -210,15 +211,15 @@ layer {
 layer {
   name: "relu1_0"
   type: "ReLU"
-  bottom: "scale1_0"
-  top: "relu1_0"
+  bottom: "conv1_0"
+  top: "conv1_0"
 }
 #######DropOut##########
 layer {
  name: "drop1_0"
  type: "Dropout"
- bottom: "relu1_0"
- top: "relu1_0"
+ bottom: "conv1_0"
+ top: "conv1_0"
  dropout_param {
   dropout_ratio: 0.2
   }
@@ -227,7 +228,7 @@ layer {
 layer {
   name: "conv2"
   type: "Convolution"
-  bottom: "relu1_0"
+  bottom: "conv1_0"
   top: "conv2"
   param {
     lr_mult: 1
@@ -248,7 +249,7 @@ layer {
   name: "bn2"
   type: "BatchNorm"
   bottom: "conv2"
-  top: "bn2"
+  top: "conv2"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -275,7 +276,7 @@ layer {
   name: "bn2"
   type: "BatchNorm"
   bottom: "conv2"
-  top: "bn2"
+  top: "conv2"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -301,8 +302,8 @@ layer {
 layer {
   name: "scale2"
   type: "Scale"
-  bottom: "bn2"
-  top: "scale2"
+  bottom: "conv2"
+  top: "conv2"
   scale_param {
     bias_term: true
   }
@@ -311,15 +312,15 @@ layer {
 layer {
   name: "relu2"
   type: "ReLU"
-  bottom: "scale2"
-  top: "relu2"
+  bottom: "conv2"
+  top: "conv2"
 }
 #######DropOut##########
 layer {
  name: "drop2_0"
  type: "Dropout"
- bottom: "relu2"
- top: "relu2"
+ bottom: "conv2"
+ top: "conv2"
  dropout_param {
   dropout_ratio: 0.2
   }
@@ -328,7 +329,7 @@ layer {
 layer {
   name: "conv2_1"
   type: "Convolution"
-  bottom: "relu2"
+  bottom: "conv2"
   top: "conv2_1"
   param {
     lr_mult: 1
@@ -349,7 +350,7 @@ layer {
   name: "bn2_1"
   type: "BatchNorm"
   bottom: "conv2_1"
-  top: "bn2_1"
+  top: "conv2_1"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -375,7 +376,7 @@ layer {
   name: "bn2_1"
   type: "BatchNorm"
   bottom: "conv2_1"
-  top: "bn2_1"
+  top: "conv2_1"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -400,8 +401,8 @@ layer {
 layer {
   name: "scale2_1"
   type: "Scale"
-  bottom: "bn2_1"
-  top: "scale2_1"
+  bottom: "conv2_1"
+  top: "conv2_1"
   scale_param {
     bias_term: true
   }
@@ -410,18 +411,18 @@ layer {
 layer {
   name: "relu2_1"
   type: "ReLU"
-  bottom: "scale2_1"
-  top: "relu2_1"
+  bottom: "conv2_1"
+  top: "conv2_1"
 }
 layer {
   name: "pool2_1"
   type: "Pooling"
-  bottom: "relu2_1"
+  bottom: "conv2_1"
   top: "pool2_1"
   pooling_param {
     pool: MAX
     kernel_size: 2
-    stride: 2#1
+    stride: 2
   }
 }
 #######DropOut##########
@@ -459,7 +460,7 @@ layer {
   name: "bn2_2"
   type: "BatchNorm"
   bottom: "conv2_2"
-  top: "bn2_2"
+  top: "conv2_2"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -485,7 +486,7 @@ layer {
   name: "bn2_2"
   type: "BatchNorm"
   bottom: "conv2_2"
-  top: "bn2_2"
+  top: "conv2_2"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -510,25 +511,24 @@ layer {
 layer {
   name: "scale2_2"
   type: "Scale"
-  bottom: "bn2_2"
-  top: "scale2_2"
+  bottom: "conv2_2"
+  top: "conv2_2"
   scale_param {
     bias_term: true
   }
 }
-
 layer {
   name: "relu2_2"
   type: "ReLU"
-  bottom: "scale2_2"
-  top: "relu2_2"
+  bottom: "conv2_2"
+  top: "conv2_2"
 }
 #######DropOut##########
 layer {
  name: "drop2_2"
  type: "Dropout"
- bottom: "relu2_2"
- top: "relu2_2"
+ bottom: "conv2_2"
+ top: "conv2_2"
  dropout_param {
   dropout_ratio: 0.2
   }
@@ -537,7 +537,7 @@ layer {
 layer {
   name: "conv3"
   type: "Convolution"
-  bottom: "relu2_2"
+  bottom: "conv2_2"
   top: "conv3"
   param {
     lr_mult: 1
@@ -557,7 +557,7 @@ layer {
   name: "bn3"
   type: "BatchNorm"
   bottom: "conv3"
-  top: "bn3"
+  top: "conv3"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -583,7 +583,7 @@ layer {
   name: "bn3"
   type: "BatchNorm"
   bottom: "conv3"
-  top: "bn3"
+  top: "conv3"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -608,8 +608,8 @@ layer {
 layer {
   name: "scale3"
   type: "Scale"
-  bottom: "bn3"
-  top: "scale3"
+  bottom: "conv3"
+  top: "conv3"
   scale_param {
     bias_term: true
   }
@@ -617,15 +617,15 @@ layer {
 layer {
   name: "relu3"
   type: "ReLU"
-  bottom: "scale3"
-  top: "relu3"
+  bottom: "conv3"
+  top: "conv3"
 }
 #######DropOut##########
 layer {
  name: "drop3"
  type: "Dropout"
- bottom: "relu3"
- top: "relu3"
+ bottom: "conv3"
+ top: "conv3"
  dropout_param {
   dropout_ratio: 0.2
   }
@@ -634,7 +634,7 @@ layer {
 layer {
   name: "conv4"
   type: "Convolution"
-  bottom: "relu3"
+  bottom: "conv3"
   top: "conv4"
   param {
     lr_mult: 1
@@ -665,7 +665,7 @@ layer {
   name: "bn4"
   type: "BatchNorm"
   bottom: "pool4"
-  top: "bn4"
+  top: "pool4"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -691,7 +691,7 @@ layer {
   name: "bn4"
   type: "BatchNorm"
   bottom: "pool4"
-  top: "bn4"
+  top: "pool4"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -716,8 +716,8 @@ layer {
 layer {
   name: "scale4"
   type: "Scale"
-  bottom: "bn4"
-  top: "scale4"
+  bottom: "pool4"
+  top: "pool4"
   scale_param {
     bias_term: true
   }
@@ -725,15 +725,15 @@ layer {
 layer {
   name: "relu4"
   type: "ReLU"
-  bottom: "scale4"
-  top: "relu4"
+  bottom: "pool4"
+  top: "pool4"
 }
 #######DropOut##########
 layer {
  name: "drop4"
  type: "Dropout"
- bottom: "relu4"
- top: "relu4"
+ bottom: "pool4"
+ top: "pool4"
  dropout_param {
   dropout_ratio: 0.2
   }
@@ -742,14 +742,14 @@ layer {
 layer {
   name: "conv4_1"
   type: "Convolution"
-  bottom: "relu4"
+  bottom: "pool4"
   top: "conv4_1"
   param {
     lr_mult: 1
   }
   convolution_param {
     num_output: 256
-    kernel_size: 3#5
+    kernel_size: 3
 	pad: 1
     stride: 1
     bias_term: true
@@ -762,7 +762,7 @@ layer {
   name: "bn4_1"
   type: "BatchNorm"
   bottom: "conv4_1"
-  top: "bn4_1"
+  top: "conv4_1"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -788,7 +788,7 @@ layer {
   name: "bn4_1"
   type: "BatchNorm"
   bottom: "conv4_1"
-  top: "bn4_1"
+  top: "conv4_1"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -813,8 +813,8 @@ layer {
 layer {
   name: "scale4_1"
   type: "Scale"
-  bottom: "bn4_1"
-  top: "scale4_1"
+  bottom: "conv4_1"
+  top: "conv4_1"
   scale_param {
     bias_term: true
   }
@@ -822,15 +822,15 @@ layer {
 layer {
   name: "relu4_1"
   type: "ReLU"
-  bottom: "scale4_1"
-  top: "relu4_1"
+  bottom: "conv4_1"
+  top: "conv4_1"
 }
 #######DropOut##########
 layer {
  name: "drop4_1"
  type: "Dropout"
- bottom: "relu4_1"
- top: "relu4_1"
+ bottom: "conv4_1"
+ top: "conv4_1"
  dropout_param {
   dropout_ratio: 0.2
   }
@@ -839,7 +839,7 @@ layer {
 layer {
   name: "conv4_2"
   type: "Convolution"
-  bottom: "relu4_1"
+  bottom: "conv4_1"
   top: "conv4_2"
   param {
     lr_mult: 1
@@ -859,7 +859,7 @@ layer {
   name: "bn4_2"
   type: "BatchNorm"
   bottom: "conv4_2"
-  top: "bn4_2"
+  top: "conv4_2"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -885,7 +885,7 @@ layer {
   name: "bn4_2"
   type: "BatchNorm"
   bottom: "conv4_2"
-  top: "bn4_2"
+  top: "conv4_2"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -910,8 +910,8 @@ layer {
 layer {
   name: "scale4_2"
   type: "Scale"
-  bottom: "bn4_2"
-  top: "scale4_2"
+  bottom: "conv4_2"
+  top: "conv4_2"
   scale_param {
     bias_term: true
   }
@@ -919,15 +919,15 @@ layer {
 layer {
   name: "relu4_2"
   type: "ReLU"
-  bottom: "scale4_2"
-  top: "relu4_2"
+  bottom: "conv4_2"
+  top: "conv4_2"
 }
 #######DropOut##########
 layer {
  name: "drop4_2"
  type: "Dropout"
- bottom: "relu4_2"
- top: "relu4_2"
+ bottom: "conv4_2"
+ top: "conv4_2"
  dropout_param {
   dropout_ratio: 0.2
   }
@@ -936,14 +936,15 @@ layer {
 layer {
   name: "pool4_2"
   type: "Pooling"
-  bottom: "relu4_2"
+  bottom: "conv4_2"
   top: "pool4_2"
   pooling_param {
     pool: MAX
     kernel_size: 2
-    stride: 2#1
+    stride: 2
   }
 }
+##########4_0##############
 layer {
   name: "conv4_0"
   type: "Convolution"
@@ -967,7 +968,7 @@ layer {
   name: "bn4_0"
   type: "BatchNorm"
   bottom: "conv4_0"
-  top: "bn4_0"
+  top: "conv4_0"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -993,7 +994,7 @@ layer {
   name: "bn4_0"
   type: "BatchNorm"
   bottom: "conv4_0"
-  top: "bn4_0"
+  top: "conv4_0"
   param {
     lr_mult: 0
 	 decay_mult: 0
@@ -1018,8 +1019,8 @@ layer {
 layer {
   name: "scale4_0"
   type: "Scale"
-  bottom: "bn4_0"
-  top: "scale4_0"
+  bottom: "conv4_0"
+  top: "conv4_0"
   scale_param {
     bias_term: true
   }
@@ -1027,15 +1028,15 @@ layer {
 layer {
   name: "relu4_0"
   type: "ReLU"
-  bottom: "scale4_0"
-  top: "relu4_0"
+  bottom: "conv4_0"
+  top: "conv4_0"
 }
 #######DropOut##########
 layer {
  name: "drop4_0"
  type: "Dropout"
- bottom: "relu4_0"
- top: "relu4_0"
+ bottom: "conv4_0"
+ top: "conv4_0"
  dropout_param {
   dropout_ratio: 0.2
   }
@@ -1044,7 +1045,7 @@ layer {
 layer {
   name: "cccp4"
   type: "Convolution"
-  bottom: "relu4_0"
+  bottom: "conv4_0"
   top: "cccp4"
   param {
     lr_mult: 1
@@ -1085,6 +1086,7 @@ layer {
   }
  }
 ########################
+#-------------------------
 layer {
   name: "cccp5"
   type: "Convolution"
@@ -1117,6 +1119,7 @@ layer {
   bottom: "cccp5"
   top: "cccp5"
 }
+
 layer {
   name: "poolcp5"
   type: "Pooling"
@@ -1125,7 +1128,7 @@ layer {
   pooling_param {
     pool: MAX
     kernel_size: 2
-    stride: 2#1
+    stride: 2
   }
 }
 #######DropOut##########
@@ -1172,6 +1175,7 @@ layer {
   bottom: "cccp6"
   top: "cccp6"
 }
+
 layer {
   name: "poolcp6"
   type: "Pooling"
@@ -1180,7 +1184,7 @@ layer {
   pooling_param {
     pool: MAX
     kernel_size: 2
-    stride: 2#1
+    stride: 2
   }
 }
 layer {
@@ -1214,6 +1218,16 @@ layer {
   top: "accuracy"
   include {
     phase: TEST
+  }
+}
+layer {
+  name: "accuracy_training"
+  type: "Accuracy"
+  bottom: "ip1"
+  bottom: "label"
+  top: "accuracy_training"
+  include {
+    phase: TRAIN
   }
 }
 layer {

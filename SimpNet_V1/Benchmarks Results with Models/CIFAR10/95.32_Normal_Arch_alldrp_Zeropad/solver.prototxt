@@ -1,49 +1,22 @@
-# reduce learning rate after 120 epochs (60000 iters) by factor 0f 10
-# then another factor of 10 after 10 more epochs (5000 iters)
-
-# The train/test net protocol buffer definition
 net: "examples/cifar10/train_val.prototxt"
-# test_iter specifies how many forward passes the test should carry out.
-# In the case of CIFAR10, we have test batch size 100 and 100 test iterations,
-# covering the full 10,000 testing images.
-test_iter: 400#40#20#10
-# Carry out testing every 1000 training iterations.
+test_iter: 100
 test_interval: 500
-# The base learning rate, momentum and the weight decay of the network.
 base_lr: 0.1
 momentum: 0.9
-weight_decay:  0.005 #0.005
-
-# The learning rate policy
+weight_decay:  0.005 
 type:"AdaDelta"
 delta:1e-3
 gamma: 0.1	
 lr_policy: "multistep"
-stepvalue: 50000#15000#25000#12000#7000#14000#20000
-stepvalue: 95000#25000#55000#18000#35000
-stepvalue: 253000#35000#75000#25000#36000#60000
-stepvalue: 295000#45000#35000#36000#60000
-stepvalue: 320000#50000#45000#36000#60000
-#stepvalue: 130000#55000#36000#60000
-#stepvalue: 150000#55000#36000#60000
-stepvalue: 370000#55000#36000#60000
-#stepvalue: 110000
-#stepvalue: 120000
-# Display every 200 iterations
+stepvalue: 50000
+stepvalue: 95000
+stepvalue: 253000
+stepvalue: 295000
+stepvalue: 320000
+stepvalue: 370000
 display: 100
-# The maximum number of iterations
 max_iter: 400000 
-# snapshot intermediate results
-snapshot: 500#40000
-snapshot_prefix: "examples/cifar10_full_relu_bn"
-# solver mode: CPU or GPU
+snapshot: 5000
+snapshot_prefix: "examples/cifar10/cifar10_SimpleNet_ZP"
 solver_mode: GPU
 random_seed: 1705
-
-
-##lr_policy: "step"
-##stepsize: 5000
-#--------------------
-#lr_policy: "inv"
-#power: 0.75
-#gamma: 0.0001

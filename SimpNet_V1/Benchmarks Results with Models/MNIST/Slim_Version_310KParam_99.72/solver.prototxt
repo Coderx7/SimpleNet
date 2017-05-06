@@ -1,0 +1,20 @@
+# The train/test net protocol buffer definition
+net: "examples/mnist/train_test.prototxt"
+test_iter: 100
+test_interval: 600
+base_lr: 0.01
+display: 100
+max_iter: 234000
+lr_policy: "multistep"
+gamma: 0.1
+momentum: 0.9
+weight_decay: 0.005
+snapshot: 10000
+snapshot_prefix: "examples/mnist/snaps/slimnet_fx_310k"
+solver_mode: GPU
+test_initialization: true
+stepvalue: 32000
+stepvalue: 48000
+stepvalue: 54000
+stepvalue: 74000
+type: "Nesterov"
