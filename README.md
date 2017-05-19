@@ -17,7 +17,7 @@ The files are being uploaded/updated.
 | CIFAR100   | 73.42/74.86        |
 | MNIST      | 99.75        |
 | SVHN       | 98.21       |
-| ImageNet   | 60.88/83.46        |
+| ImageNet   | 60.97/83.54        |
 
 #### Comparison with other architectures 
 Table 1 showing different architectures statistics
@@ -97,7 +97,7 @@ Table 5 showing ImageNet2012 results
 | VGGNet16(138M) | 70.5 |
 | GoogleNet(8M) | 68.7 |
 | Wide ResNet(11.7M) | 69.6/89.07 |
-| Our architecture\* | **60.88/83.46** |
+| Our architecture\* | **60.97/83.54** |
 
                          \*Trained only for 300K (still training)
 
