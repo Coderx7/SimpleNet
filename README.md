@@ -11,7 +11,7 @@ The files are being uploaded/updated.
 
 
 #### Results Overview :
-ImageNet result was achieved using single-scale training(256x256 input), without any multiscale, multicrop at train or test time. no dense evaluation or combinations of such tricks were used unlike all other architectures. 
+ImageNet result was achieved using single-scale training(256x256 input). no multiscale, multicrop tricks were used. no dense evaluation or combinations of such tricks were used unlike all other architectures. 
 
 | Dataset | Accuracy |
 |------------|----------|
