@@ -117,7 +117,7 @@ Table 6-Slimmed version Results on Different Datasets
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **#Param** | **310K** | **460K** | **6M** | **1M** | **1.3M** | **6M** | **475K** | **600K** | **1M** |
 | **CIFAR10** | **91.98** | **92.33** | **90.62** | **92.03** | **92.75** | **90.78** | **91.6** | **93.15** | **91.19** |
-| **CIFAR100** | **64.**** 68 **|** 66.82 **|** 65.46 **|** 65.43 **|** 66.29 **|** 66.22 **|** 67.37 **|** 69.11 **|** -** |
+| **CIFAR100** | **64.68**|**66.82**|**65.46**|**65.43**|**66.29**|**66.22**|**67.37**|**69.11**|**-** |
 
 | Other datasets | Our result |
 | --- | --- |
@@ -185,7 +185,7 @@ CIFAR100 Extended results:
 | Our Architecture 1 | **73.45** |
 | Our Architecture 2 | **74.86** |
 
-- Achieved using several data-augmentation tricks
+** Achieved using several data-augmentation tricks
 
 **Flops and Parameter Comparison:**
 
@@ -208,23 +208,10 @@ CIFAR100 Extended results:
 As it can be seen, our architecture both has much fewer number of parameters (with an exception of squeezenet) and also much fewer number of operations.
 
 
+1# Data-augmentation method used by stochastic depth paper: [https://github.com/Pastromhaug/caffe-stochastic-depth](https://github.com/Pastromhaug/caffe-stochastic-depth).
 
-1
+2# https://github.com/dmlc/mxnet-model-gallery/blob/master/imagenet-1k-inception-v3.md
 
-#
- Data-augmentation method used by stochastic depth paper: [https://github.com/Pastromhaug/caffe-stochastic-depth](https://github.com/Pastromhaug/caffe-stochastic-depth).
+3# https://github.com/tensorflow/models/tree/master/slim
 
-2
-
-#
- https://github.com/dmlc/mxnet-model-gallery/blob/master/imagenet-1k-inception-v3.md
-
-3
-
-#
- https://github.com/tensorflow/models/tree/master/slim
-
-4
-
-#
- https://github.com/revilokeb/inception\_resnetv2\_caffe
+4# https://github.com/revilokeb/inception\_resnetv2\_caffe
