@@ -1,4 +1,6 @@
-SimpleNet: Lets Keep it simple, Using simple architectures to outperform deeper and more complex architectures. 
+# Lets Keep it simple, Using simple architectures to outperform deeper and more complex architectures. 
+
+![GitHub Logo](/SimpNet_V1/images(plots)/SimpleNet_Arch_Larged.jpg)
 
 This repository contains the architectures, Models, logs, etc pertaining to the SimpleNet Paper 
 (Lets keep it simple: Using simple architectures to outperform deeper architectures ) : https://arxiv.org/abs/1608.06037 
@@ -6,9 +8,6 @@ This repository contains the architectures, Models, logs, etc pertaining to the 
 SimpleNet-V1 outperforms deeper and heavier architectures such as AlexNet, VGGNet,ResNet,GoogleNet,etc in a series of benchmark datasets, such as CIFAR10/100, MNIST, SVHN. 
 It also achievs a higher accuracy (currently 60.97/83.54) in imagenet, more than AlexNet, NIN, Squeezenet, etc with only 5.4M parameters.
 Slimer versions of the architecture work very decently against more complex architectures such as ResNet and WRN as well.
-
-The files are being uploaded/updated.  
-
 
 #### Results Overview :
 ImageNet result was achieved using single-scale training(256x256 input). no multiscale, multicrop techniques were used. no dense evaluation or combinations of such techniques were used unlike all other architectures. 
@@ -24,14 +23,11 @@ ImageNet result was achieved using single-scale training(256x256 input). no mult
 #### Comparison with other architectures 
 Table 1 showing different architectures statistics
 
-| **Model** | **AlexNet** | **GoogleNet** | **ResNet152** | **VGGNet16** | **NIN** | **Ours** |
-| --- | --- | --- | --- | --- | --- | --- |
-| **#Param** | 60M | 7M | 60M | 138M | 7.6M | 5.4M |
-| **#OP** | 1140M | 1600M | 11300M | 15740M | 1100M | 652M |
-| **Storage (MB)** | 217 | 51 | 230 | 512.24 | 29 | 20 |
-
-
-
+| Model        | AlexNet | GoogleNet | ResNet152 |  VGG16 |   NIN  | **SimpleNet** |
+|:-------------|:-------:|:---------:|:---------:|:------:|:------:|:-------------:|
+| Param        |   60M   |     7M    |    60M    |  138M  |  7.6M  |    **5.4M**   |
+| OP           |  7.27G  |   16.04G  |   11.3G   | 154.7G | 11.06G |    **652M**   |
+| Storage (MB) |   217   |     40    |    230    | 512.24 |   29   |     **20**    |
 
 
 Table 2 showing Top CIFAR10/100 results
