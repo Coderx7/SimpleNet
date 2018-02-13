@@ -188,21 +188,134 @@ CIFAR100 Extended results:
 ** Achieved using several data-augmentation tricks
 
 **Flops and Parameter Comparison:**
-
-|   | MACC | COMP | ADD | DIV | EXP | Activations | Params | SIZE(MB) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| SimpleNet | 652 M | 0.838M | 10 | 10 | 10 | 1 M | 5 M | 20.9 |
-| SqueezeNet | 861 M | 10 M | 226K | 1.51M | 1K | 13 M | 1 M | 4.7 |
-| Inception v4\* | 12270 M | 21.9 M | 5.34M | 897K | 1K | 73 M | 43 M | 163 |
-| Inception v3\* | 5710 M | 16.5 M | 2.59M | 1.71M | 11K | 33 M | 24 M | 91 |
-| Inception-ResNetv2\* | 9210 M | 17.6 M | 2.36M | 1K | 1K | 74 M | 32 M | 210 |
-| ResNet-152 | 11300 M | 22.33M | 35.27M | 22.03M | 1K | 100.26M | 60.19M | 230 |
-| ResNet-50 | 3870 M | 10.9 M | 1.62M | 1.06M | 1K | 47 M | 26 M | 97.70 |
-| AlexNet | 1140 M | 1.77 M | 478K | 955K | 478K | 2 M | 62 M | 217.00 |
-| GoogleNet | 1600 M | 16.1 M | 883K | 166K | 833K | 10 M | 7 M | 22.82 |
-| Network in Network | 1100 M | 2.86 M | 370K | 1K | 1K | 3.8 M | 8 M | 29 |
-| VGG16 | 15740 M | 19.7 M | 1K | 1K | 1K | 29 M | 138 M | 512.2 |
-
+<table>
+<caption>Flops and Parameter Comparison of Models trained on ImageNet</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Model</strong></th>
+<th style="text-align: center;"><strong>MACC</strong></th>
+<th style="text-align: center;"><strong>COMP</strong></th>
+<th style="text-align: center;"><strong>ADD</strong></th>
+<th style="text-align: center;"><strong>DIV</strong></th>
+<th style="text-align: center;"><strong>Activations</strong></th>
+<th style="text-align: center;"><strong>Params</strong></th>
+<th style="text-align: center;"><strong>SIZE(MB)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">SimpleNet</td>
+<td style="text-align: center;">1.9G</td>
+<td style="text-align: center;">1.82M</td>
+<td style="text-align: center;">1.5M</td>
+<td style="text-align: center;">1.5M</td>
+<td style="text-align: center;">6.38M</td>
+<td style="text-align: center;">6.4M</td>
+<td style="text-align: center;">24.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SqueezeNet</td>
+<td style="text-align: center;">861.34M</td>
+<td style="text-align: center;">9.67M</td>
+<td style="text-align: center;">226K</td>
+<td style="text-align: center;">1.51M</td>
+<td style="text-align: center;">12.58M</td>
+<td style="text-align: center;">1.25M</td>
+<td style="text-align: center;">4.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Inception v4*</td>
+<td style="text-align: center;">12.27G</td>
+<td style="text-align: center;">21.87M</td>
+<td style="text-align: center;">53.42M</td>
+<td style="text-align: center;">15.09M</td>
+<td style="text-align: center;">72.56M</td>
+<td style="text-align: center;">42.71M</td>
+<td style="text-align: center;">163</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Inception v3*</td>
+<td style="text-align: center;">5.72G</td>
+<td style="text-align: center;">16.53M</td>
+<td style="text-align: center;">25.94M</td>
+<td style="text-align: center;">8.97M</td>
+<td style="text-align: center;">41.33M</td>
+<td style="text-align: center;">23.83M</td>
+<td style="text-align: center;">91</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Incep-Resv2*</td>
+<td style="text-align: center;">13.18G</td>
+<td style="text-align: center;">31.57M</td>
+<td style="text-align: center;">38.81M</td>
+<td style="text-align: center;">25.06M</td>
+<td style="text-align: center;">117.8M</td>
+<td style="text-align: center;">55.97M</td>
+<td style="text-align: center;">214</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ResNet-152</td>
+<td style="text-align: center;">11.3G</td>
+<td style="text-align: center;">22.33M</td>
+<td style="text-align: center;">35.27M</td>
+<td style="text-align: center;">22.03M</td>
+<td style="text-align: center;">100.11M</td>
+<td style="text-align: center;">60.19M</td>
+<td style="text-align: center;">230</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ResNet-50</td>
+<td style="text-align: center;">3.87G</td>
+<td style="text-align: center;">10.89M</td>
+<td style="text-align: center;">16.21M</td>
+<td style="text-align: center;">10.59M</td>
+<td style="text-align: center;">46.72M</td>
+<td style="text-align: center;">25.56M</td>
+<td style="text-align: center;">97.70</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">AlexNet</td>
+<td style="text-align: center;">7.27G</td>
+<td style="text-align: center;">17.69M</td>
+<td style="text-align: center;">4.78M</td>
+<td style="text-align: center;">9.55M</td>
+<td style="text-align: center;">20.81M</td>
+<td style="text-align: center;">60.97M</td>
+<td style="text-align: center;">217.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">GoogleNet</td>
+<td style="text-align: center;">16.04G</td>
+<td style="text-align: center;">161.07M</td>
+<td style="text-align: center;">8.83M</td>
+<td style="text-align: center;">16.64M</td>
+<td style="text-align: center;">102.19M</td>
+<td style="text-align: center;">7M</td>
+<td style="text-align: center;">40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NIN</td>
+<td style="text-align: center;">11.06G</td>
+<td style="text-align: center;">28.93M</td>
+<td style="text-align: center;">380K</td>
+<td style="text-align: center;">20K</td>
+<td style="text-align: center;">38.79M</td>
+<td style="text-align: center;">7.6M</td>
+<td style="text-align: center;">29</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">VGG16</td>
+<td style="text-align: center;">154.7G</td>
+<td style="text-align: center;">196.85M</td>
+<td style="text-align: center;">10K</td>
+<td style="text-align: center;">10K</td>
+<td style="text-align: center;">288.03M</td>
+<td style="text-align: center;">138.36M</td>
+<td style="text-align: center;">512.2</td>
+</tr>
+</tbody>
+</table>
+    
 \*Inception v3, v4 and Inception-ResNetV2 did not have any Caffe model, so we reported their size related information from mxnet2 and tensorflow3 respectively. Inception-ResNet-V2 would take 60 days of training with 2 Titan X to achieve the reported accuracy4
 
 As it can be seen, our architecture both has much fewer number of parameters (with an exception of squeezenet) and also much fewer number of operations.
