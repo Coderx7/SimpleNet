@@ -1,4 +1,4 @@
-## Lets Keep it simple, Using simple architectures to outperform deeper and more complex architectures(2016).
+## Lets Keep it simple, Using simple architectures to outperform deeper and more complex architectures (2016).
 
 ![GitHub Logo](/SimpNet_V1/images(plots)/SimpleNet_Arch_Larged.jpg)
 
