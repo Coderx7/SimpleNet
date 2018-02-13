@@ -9,6 +9,17 @@ SimpleNet-V1 outperforms deeper and heavier architectures such as AlexNet, VGGNe
 It also achievs a higher accuracy (currently 60.97/83.54) in imagenet, more than AlexNet, NIN, Squeezenet, etc with only 5.4M parameters.
 Slimer versions of the architecture work very decently against more complex architectures such as ResNet and WRN as well.
 
+## Citation
+If you find SimpleNet useful in your research, please consider citing:
+
+    @article{hasanpour2016lets,
+      title={Lets keep it simple, Using simple architectures to outperform deeper and more complex architectures},
+      author={Hasanpour, Seyyed Hossein and Rouhani, Mohammad and Fayyaz, Mohsen and Sabokrou, Mohammad},
+      journal={arXiv preprint arXiv:1608.06037},
+      year={2016}
+    }
+
+
 #### Results Overview :
 ImageNet result was achieved using single-scale training(256x256 input). no multiscale, multicrop techniques were used. no dense evaluation or combinations of such techniques were used unlike all other architectures. 
 
@@ -324,3 +335,5 @@ As it can be seen, our architecture both has much fewer number of parameters (wi
 3# https://github.com/tensorflow/models/tree/master/slim
 
 4# https://github.com/revilokeb/inception\_resnetv2\_caffe
+
+
