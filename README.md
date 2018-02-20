@@ -3,7 +3,8 @@
 ![GitHub Logo](/SimpNet_V1/images(plots)/SimpleNet_Arch_Larged.jpg)
 
 This repository contains the architectures, Models, logs, etc pertaining to the SimpleNet Paper 
-(Lets keep it simple: Using simple architectures to outperform deeper architectures ) : https://arxiv.org/abs/1608.06037 
+(Lets keep it simple: Using simple architectures to outperform deeper architectures ) : https://arxiv.org/abs/1608.06037       
+(Check the successor of this architecture at [Towards Principled Design of Deep Convolutional Networks: Introducing SimpNet](https://github.com/Coderx7/SimpNet))
 
 SimpleNet-V1 outperforms deeper and heavier architectures such as AlexNet, VGGNet,ResNet,GoogleNet,etc in a series of benchmark datasets, such as CIFAR10/100, MNIST, SVHN. 
 It also achievs a higher accuracy (currently 60.97/83.54) in imagenet, more than AlexNet, NIN, Squeezenet, etc with only 5.4M parameters.
