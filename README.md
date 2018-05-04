@@ -20,17 +20,24 @@ If you find SimpleNet useful in your research, please consider citing:
       year={2016}
     }
 
+## Other Implementations : 
 
-#### Results Overview :
+**Pytorch** :
+For using Pytorch implemnetation click [Pytorch implementation](https://github.com/Coderx7/SimpleNet_Pytorch) 
+
+
+## Results Overview :
 ImageNet result was achieved using single-scale training(256x256 input). no multiscale, multicrop techniques were used. no dense evaluation or combinations of such techniques were used unlike all other architectures. 
 
 | Dataset | Accuracy |
 |------------|----------|
-| Cifar10    | 94.75/95.32    |
-| CIFAR100   | 73.42/74.86        |
-| MNIST      | 99.75        |
-| SVHN       | 98.21       |
-| ImageNet   | 60.97/83.54        |
+| Cifar10    | **95.32** |
+| CIFAR100*  | **77.83**|
+| MNIST      | 99.75    |
+| SVHN       | 98.21    |
+| ImageNet   | 60.97/83.54  |
+
+* Achieved using Pytorch implementation 
 
 #### Comparison with other architectures :
 
