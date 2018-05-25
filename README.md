@@ -66,7 +66,7 @@ ImageNet result was achieved using single-scale training(256x256 input). no mult
 | Max-out NIN                  |      \-      |     93.25     |    71.14     |
 | LSUV                         |     N/A      |     94.16     |     N/A      |
 | SimpleNet-Arch 1\(۞)        |    5.48M     |   **94.75**   |      \-      |
-| SimpleNet-Arch 2 \(۩) |    5.48M     |   **95.32**   |  **73.42**   |
+| SimpleNet-Arch 2 \(۩) |    5.48M     |   **95.32**   |  **77.83**   |
 
 \*Note that the Fractional max pooling[13] uses deeper architectures and also uses extreme data augmentation.۞  means No zero-padding or normalization with dropout and ۩ means Standard data-augmentation- with dropout. To our knowledge, our architecture has the state of the art result, without aforementioned data-augmentations.
 
@@ -186,8 +186,8 @@ Table 6-Slimmed version Results on Different Datasets
 | WRN                                       |  77.11/79.5  |
 | Highway                                   |    67.76     |
 | FitNet                                    |    64.96     |
-| SimpleNet-Arch1                           |    73.45     |
-| SimpleNet-Arch2                           |    74.86     |
+| SimpleNet                                 |    77.83     |
+
 
 
 ** Achieved using several data-augmentation tricks
