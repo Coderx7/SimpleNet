@@ -27,7 +27,7 @@ For using Pytorch implemnetation click [Pytorch implementation](https://github.c
 
 
 ## Results Overview :
-ImageNet result was achieved using single-scale training(256x256 input). no multiscale, multicrop techniques were used. no dense evaluation or combinations of such techniques were used unlike all other architectures. 
+ImageNet result was achieved using simple SGD without hyper parameter tuning for 100 epochs. the models will be uploaded when the training is finished. 
 
 | Dataset | Accuracy |
 |------------|----------|
@@ -35,7 +35,7 @@ ImageNet result was achieved using single-scale training(256x256 input). no mult
 | CIFAR100*  | **77.83**|
 | MNIST      | 99.75    |
 | SVHN       | 98.21    |
-| ImageNet   | 60.97/83.54  |
+| ImageNet   | 67.17/87.44  |
 
 * Achieved using Pytorch implementation 
 
