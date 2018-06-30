@@ -7,7 +7,7 @@ This repository contains the architectures, Models, logs, etc pertaining to the 
 (Check the successor of this architecture at [Towards Principled Design of Deep Convolutional Networks: Introducing SimpNet](https://github.com/Coderx7/SimpNet))
 
 SimpleNet-V1 outperforms deeper and heavier architectures such as AlexNet, VGGNet,ResNet,GoogleNet,etc in a series of benchmark datasets, such as CIFAR10/100, MNIST, SVHN. 
-It also achievs a higher accuracy (currently 60.97/83.54) in imagenet, more than AlexNet, NIN, Squeezenet, etc with only 5.4M parameters.
+It also achievs a higher accuracy (currently 67.17/87.44) in imagenet, more than AlexNet, NIN, Squeezenet, etc with only 5.7M parameters.
 Slimer versions of the architecture work very decently against more complex architectures such as ResNet and WRN as well.
 
 ## Citation
