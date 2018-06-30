@@ -27,7 +27,7 @@ For using Pytorch implemnetation click [Pytorch implementation](https://github.c
 
 
 ## Results Overview :
-ImageNet result was achieved using simple SGD without hyper parameter tuning for 100 epochs. the models will be uploaded when the training is finished. 
+ImageNet result was achieved using simple SGD without hyper parameter tuning for 100 epochs(single crop). no multicrop techniques were used. no dense evaluation or combinations of such techniques were used unlike all other architectures. the models will be uploaded when the training is finished. 
 
 | Dataset | Accuracy |
 |------------|----------|
