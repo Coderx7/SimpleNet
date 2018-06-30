@@ -114,10 +114,7 @@ achieved using an ensemble or extreme data-augmentation
 | VGGNet16(138M)     |          70.5           |
 | GoogleNet(8M)      |          68.7           |
 | Wide ResNet(11.7M) |       69.6/89.07        |
-| SimpleNet(5.4M)    |     **60.97/83.54**     |
-| SimpleNet(310K)    |     **37.34/63.4**      |
-
-\*Trained only for 300K (still training)
+| SimpleNet(5.4M)    |     **67.17/87.44**     |
 
 
 Table 6-Slimmed version Results on Different Datasets
@@ -132,10 +129,8 @@ Table 6-Slimmed version Results on Different Datasets
 | --- | --- |
 | MNIST(310K)\* | **99.72** |
 | SVHN(310K)\* | **97.63** |
-| ImageNet(310K) \*\* | **37.34/63.4** |
 
-
-\*Since we presented their results in their respective sections, we avoided mentioning the results here again. \*\*ImageNet result belongs to the latest iteration of a still ongoing training.
+\*Since we presented their results in their respective sections, we avoided mentioning the results here again. 
 
 
 
