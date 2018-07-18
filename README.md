@@ -39,15 +39,6 @@ ImageNet result was achieved using simple SGD without hyper parameter tuning for
 
 * Achieved using Pytorch implementation 
 
-#### Comparison with other architectures :
-
-| Model        | AlexNet | GoogleNet | ResNet152 |  VGG16 |   NIN  | **SimpleNet** |
-|:-------------|:-------:|:---------:|:---------:|:------:|:------:|:-------------:|
-| Param        |   60M   |     7M    |    60M    |  138M  |  7.6M  |    **5.4M**   |
-| OP           |  7.27G  |   16.04G  |   11.3G   | 154.7G | 11.06G |    **652M**   |
-| Storage (MB) |   217   |     40    |    230    | 512.24 |   29   |     **20**    |
-
-
 #### Top CIFAR10/100 results:
 
 
