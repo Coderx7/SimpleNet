@@ -31,7 +31,7 @@ ImageNet result was achieved using simple SGD without hyper parameter tuning for
 
 | Dataset | Accuracy |
 |------------|----------|
-| Cifar10    | **95.32** |
+| Cifar10    | **95.51** |
 | CIFAR100*  | **77.83**|
 | MNIST      | 99.75    |
 | SVHN       | 98.21    |
