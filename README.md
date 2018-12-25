@@ -32,7 +32,7 @@ ImageNet result was achieved using simple SGD without hyper parameter tuning for
 | Dataset | Accuracy |
 |------------|----------|
 | Cifar10    | **95.51** |
-| CIFAR100*  | **77.83**|
+| CIFAR100*  | **78.37**|
 | MNIST      | 99.75    |
 | SVHN       | 98.21    |
 | ImageNet   | 67.17/87.44  |
@@ -57,7 +57,7 @@ ImageNet result was achieved using simple SGD without hyper parameter tuning for
 | Max-out NIN                  |      \-      |     93.25     |    71.14     |
 | LSUV                         |     N/A      |     94.16     |     N/A      |
 | SimpleNet-Arch 1\(۞)        |    5.48M     |   **94.75**   |      \-      |
-| SimpleNet-Arch 2 \(۩) |    5.48M     |   **95.32**   |  **77.83**   |
+| SimpleNet-Arch 2 \(۩) |    5.48M     |   **95.51**   |  **78.37**   |
 
 \*Note that the Fractional max pooling[13] uses deeper architectures and also uses extreme data augmentation.۞  means No zero-padding or normalization with dropout and ۩ means Standard data-augmentation- with dropout. To our knowledge, our architecture has the state of the art result, without aforementioned data-augmentations.
 
