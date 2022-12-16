@@ -7,7 +7,7 @@ This repository contains the architectures, Models, logs, etc pertaining to the 
 (Check the successor of this architecture at [Towards Principled Design of Deep Convolutional Networks: Introducing SimpNet](https://github.com/Coderx7/SimpNet))
 
 SimpleNet-V1 outperforms deeper and heavier architectures such as AlexNet, VGGNet,ResNet,GoogleNet,etc in a series of benchmark datasets, such as CIFAR10/100, MNIST, SVHN. 
-It also achievs a higher accuracy (currently [67.17/87.44](https://gist.github.com/Coderx7/58a1a03e7ac39da5e10768d22e120320)) in imagenet, more than AlexNet, NIN, Squeezenet, etc with only 5.7M parameters.
+It also achievs a higher accuracy (currently [71.14/89.75](https://github.com/Coderx7/SimpleNet_Pytorch#imagenet-result)) in imagenet, more than VGGNet, ResNet, MobileNet, AlexNet, NIN, Squeezenet, etc with only 5.7M parameters.
 Slimer versions of the architecture work very decently against more complex architectures such as ResNet and WRN as well.
 
 ## Citation
@@ -35,7 +35,7 @@ ImageNet result was achieved using simple SGD without hyper parameter tuning for
 | CIFAR100*  | **78.37**|
 | MNIST      | 99.75    |
 | SVHN       | 98.21    |
-| ImageNet   | 67.17/87.44  |
+| ImageNet   | **71.14/89.75**  |
 
 * Achieved using Pytorch implementation 
 
