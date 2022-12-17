@@ -105,7 +105,7 @@ achieved using an ensemble or extreme data-augmentation
 | VGGNet16(138M)     |          70.5           |
 | GoogleNet(8M)      |          68.7           |
 | Wide ResNet(11.7M) |       69.6/89.07        |
-| SimpleNet(5.4M)    |     **67.17/87.44**     |
+| SimpleNet(5.4M)    |     **71.14/89.75**     |
 
 
 Table 6-Slimmed version Results on Different Datasets
