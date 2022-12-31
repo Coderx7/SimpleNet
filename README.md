@@ -4,11 +4,12 @@
 
 This repository contains the architectures, Models, logs, etc pertaining to the SimpleNet Paper 
 (Lets keep it simple: Using simple architectures to outperform deeper architectures ) : https://arxiv.org/abs/1608.06037       
-(Check the successor of this architecture at [Towards Principled Design of Deep Convolutional Networks: Introducing SimpNet](https://github.com/Coderx7/SimpNet))
 
 SimpleNet-V1 outperforms deeper and heavier architectures such as AlexNet, VGGNet,ResNet,GoogleNet,etc in a series of benchmark datasets, such as CIFAR10/100, MNIST, SVHN. 
-It also achievs a higher accuracy (currently [71.14/89.75](https://github.com/Coderx7/SimpleNet_Pytorch#imagenet-result)) in imagenet, more than VGGNet, ResNet, MobileNet, AlexNet, NIN, Squeezenet, etc with only 5.7M parameters.
-Slimer versions of the architecture work very decently against more complex architectures such as ResNet and WRN as well.
+It also achievs a higher accuracy (currently [71.50/90.05 and 78.88/93.43*](https://github.com/Coderx7/SimpleNet_Pytorch#imagenet-result)) in imagenet, more than VGGNet, ResNet, MobileNet, AlexNet, NIN, Squeezenet, etc with only 5.7M parameters.
+Slimer versions of the architecture work very decently against more complex architectures such as ResNet, WRN and MobileNet as well.
+
+*78.88/93.43 was achieved using real-imagenet-labels
 
 ## Citation
 If you find SimpleNet useful in your research, please consider citing:
@@ -19,6 +20,10 @@ If you find SimpleNet useful in your research, please consider citing:
       journal={arXiv preprint arXiv:1608.06037},
       year={2016}
     }
+
+
+(Check the successor of this architecture at [Towards Principled Design of Deep Convolutional Networks: Introducing SimpNet](https://github.com/Coderx7/SimpNet))
+
 
 ## Other Implementations : 
 
@@ -35,9 +40,11 @@ ImageNet result was achieved using simple SGD without hyper parameter tuning for
 | CIFAR100*  | **78.37**|
 | MNIST      | 99.75    |
 | SVHN       | 98.21    |
-| ImageNet   | **71.14/89.75**  |
+| ImageNet   | **71.50/90.05 - 78.88/93.43***  |
 
 * Achieved using Pytorch implementation 
+* the second result achieved using real-imagenet-labels
+
 
 #### Top CIFAR10/100 results:
 
@@ -105,7 +112,7 @@ achieved using an ensemble or extreme data-augmentation
 | VGGNet16(138M)     |          70.5           |
 | GoogleNet(8M)      |          68.7           |
 | Wide ResNet(11.7M) |       69.6/89.07        |
-| SimpleNet(5.4M)    |     **71.14/89.75**     |
+| SimpleNet(5.7M)    |     **71.50/90.05**     |
 
 
 Table 6-Slimmed version Results on Different Datasets
