@@ -1,4 +1,8 @@
 
+### Where are the pretrained weights?
+All pretrained weights are now accessible from [Release section](https://github.com/Coderx7/SimpleNet/releases) of the reposityory.
+
+### Note
 Please note that models are converted from onnx to caffe.
 The mean, std and crop ratio used are as follows: 
 ```python
