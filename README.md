@@ -1,3 +1,5 @@
+بسم الله الرحمن الرحیم  
+پیاده سازی رسمی سیمپل نت در کفی 2016
 ## Lets Keep it simple, Using simple architectures to outperform deeper and more complex architectures (2016).
 
 ![GitHub Logo](/SimpNet_V1/images(plots)/SimpleNet_Arch_Larged.jpg)
@@ -29,7 +31,7 @@ If you find SimpleNet useful in your research, please consider citing:
 ## Other Implementations : 
 
 **Pytorch** :
-For using Pytorch implemnetation click [Pytorch implementation](https://github.com/Coderx7/SimpleNet_Pytorch) 
+Official [Pytorch implementation](https://github.com/Coderx7/SimpleNet_Pytorch) 
 
 
 ## Results Overview :
@@ -44,6 +46,11 @@ ImageNet result below was achieved using the [Pytorch implementation](https://gi
 | MNIST      | 99.75    |
 | SVHN       | 98.21    |
 
+
+* Achieved using Pytorch implementation 
+* the second result achieved using real-imagenet-labels (validation only)
+
+
 #### Extended ImageNet Result:  
 
 | **Method**                   | **\#Params** |  **ImageNet** | **ImageNet-Real-Labels**  |
@@ -54,12 +61,8 @@ ImageNet result below was achieved using the [Pytorch implementation](https://gi
 | SimpleNetV1_imagenet(5.78 MB)    |     1.5m     | 61.524/83.43   | 69.11/88.10   |   
 
 SimpleNet performs very decently, it outperforms VGGNet, variants of ResNet and MobileNets(1-3)   
-and its pretty fast as well!  
-
-
-* Achieved using Pytorch implementation 
-* the second result achieved using real-imagenet-labels
-
+and is pretty fast as well! and its all using plain old CNN!.    
+For benchmark results [look here](https://github.com/Coderx7/SimpleNet_Pytorch/tree/master/ImageNet/training_scripts/imagenet_training/results) 
 
 #### Top CIFAR10/100 results:
 
@@ -236,4 +239,16 @@ achieve the reported accuracy. Statistics are obtained using
 
 4# https://github.com/revilokeb/inception\_resnetv2\_caffe
 
+#### Side Note:
+This was based on my Master's thesis titled "Object classification using Deep Convolutional neural networks" back in 1394/2015.
+
+## Citation
+If you find SimpleNet useful in your research, please consider citing:
+
+    @article{hasanpour2016lets,
+      title={Lets keep it simple, Using simple architectures to outperform deeper and more complex architectures},
+      author={Hasanpour, Seyyed Hossein and Rouhani, Mohammad and Fayyaz, Mohsen and Sabokrou, Mohammad},
+      journal={arXiv preprint arXiv:1608.06037},
+      year={2016}
+    }
 
