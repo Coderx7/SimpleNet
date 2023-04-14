@@ -8,11 +8,8 @@ This repository contains the architectures, Models, logs, etc pertaining to the 
 (Lets keep it simple: Using simple architectures to outperform deeper architectures ) : https://arxiv.org/abs/1608.06037       
 
 SimpleNet-V1 outperforms deeper and heavier architectures such as AlexNet, VGGNet,ResNet,GoogleNet,etc in a series of benchmark datasets, such as CIFAR10/100, MNIST, SVHN. 
-It also achievs a higher accuracy (currently [71.94/90.30 and 79.12/93.68*](https://github.com/Coderx7/SimpleNet_Pytorch#imagenet-result)) in imagenet, more than VGGNet, ResNet, MobileNet, AlexNet, NIN, Squeezenet, etc with only 5.7M parameters. It also achieves **74.17/91.614** and **81.24/94.63*** with 9m version.   
+It also achievs a higher accuracy (currently [**72.03/90.32**](https://github.com/Coderx7/SimpleNet_Pytorch#imagenet-result)) in imagenet, more than VGGNet, ResNet, MobileNet, AlexNet, NIN, Squeezenet, etc with only 5.7M parameters. It also achieves [**74.23/91.748**](https://github.com/Coderx7/SimpleNet_Pytorch#imagenet-result)) with 9m version.   
 Slimer versions of the architecture work very decently against more complex architectures such as ResNet, WRN and MobileNet as well.
-
-*79.12/93.68 was achieved using real-imagenet-labels
-*81.24/94.63 was achieved using real-imagenet-labels
 
 ## Citation
 If you find SimpleNet useful in your research, please consider citing:
@@ -39,8 +36,8 @@ ImageNet result below was achieved using the [Pytorch implementation](https://gi
 
 | Dataset | Accuracy |
 |------------|----------|
-| ImageNet-top1 (9m)  | **74.17 / 81.24***  |
-| ImageNet-top1 (5m)   | **71.94 / 79.12***  |
+| ImageNet-top1 (9m)  | **74.23**  |
+| ImageNet-top1 (5m)   | **72.03** |
 | Cifar10    | **95.51** |
 | CIFAR100*  | **78.37**|
 | MNIST      | 99.75    |
@@ -53,12 +50,12 @@ ImageNet result below was achieved using the [Pytorch implementation](https://gi
 
 #### Extended ImageNet Result:  
 
-| **Method**                   | **\#Params** |  **ImageNet** | **ImageNet-Real-Labels**  |
-| :--------------------------- | :----------: | :-----------: | :-----------: |  
-| SimpleNetV1_imagenet(36.33 MB)   |     9.5m     | 74.17/91.614   | 81.24/94.63   |  
-| SimpleNetV1_imagenet(21.9 MB)   |     5.7m     | 71.936/90.3    | 79.12/93.68   |         
-| SimpleNetV1_imagenet(12.58 MB)   |     3m       | 68.15/87.762   | 75.66/91.80   |  
-| SimpleNetV1_imagenet(5.78 MB)    |     1.5m     | 61.524/83.43   | 69.11/88.10   |   
+|       **Model**                  | **\#Params** |  **ImageNet**   | **ImageNet-Real-Labels**  |
+| :---------------------------     | :----------: | :-----------:   |   :------------------:    |  
+| simplenetv1_9m_m2(36.3 MB)       |     9.5m     | 74.23 / 91.748  |      81.22 / 94.756         |  
+| simplenetv1_5m_m2(22 MB)         |     5.7m     | 72.03 / 90.324  |      79.328/ 93.714        |         
+| simplenetv1_small_m2_075(12.6 MB)|     3m       | 68.506/ 88.15   |      76.283/ 92.02         |  
+| simplenetv1_small_m2_05(5.78 MB) |     1.5m     | 61.67 / 83.488  |      69.31 / 88.195        |   
 
 SimpleNet performs very decently, it outperforms VGGNet, variants of ResNet and MobileNets(1-3)   
 and is pretty fast as well! and its all using plain old CNN!.    
