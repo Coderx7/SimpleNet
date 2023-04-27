@@ -81,7 +81,8 @@ SimpleNet outperforms much deeper and larger architectures on the ImageNet datas
 
 SimpleNet performs very decently, it outperforms VGGNet, variants of ResNet and MobileNets(1-3)   
 and is pretty fast as well! and its all using plain old CNN!.    
-For benchmark results [look at the Pytorch implementation page](https://github.com/Coderx7/SimpleNet_Pytorch/tree/master/ImageNet/training_scripts/imagenet_training/results) 
+To view the full benchmark results visit the [benchmark page](https://github.com/Coderx7/SimpleNet_Pytorch/tree/master/ImageNet/training_scripts/imagenet_training/results).   
+To view more results checkout the [the Pytorch implementation page](https://github.com/Coderx7/SimpleNet_Pytorch) 
 
 
 #### Top CIFAR10/100 results:
