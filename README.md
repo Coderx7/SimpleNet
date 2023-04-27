@@ -23,12 +23,16 @@ If you find SimpleNet useful in your research, please consider citing:
 
 
 (Check the successor of this architecture at [Towards Principled Design of Deep Convolutional Networks: Introducing SimpNet](https://github.com/Coderx7/SimpNet))
-
+\
+&nbsp;
 
 ## Other Implementations : 
 
-**Pytorch** :
-Official [Pytorch implementation](https://github.com/Coderx7/SimpleNet_Pytorch) 
+<img src="https://github.com/pytorch/pytorch/blob/main/docs/source/_static/img/pytorch-logo-dark.png" width="86" height="17" /> Official [Pytorch implementation](https://github.com/Coderx7/SimpleNet_Pytorch) 
+\
+&nbsp;
+\
+&nbsp;
 
 
 ## Results Overview :
