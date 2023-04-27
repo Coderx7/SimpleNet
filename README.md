@@ -43,10 +43,28 @@ ImageNet result below was achieved using the [Pytorch implementation](https://gi
 | MNIST      | 99.75    |
 | SVHN       | 98.21    |
 
-
 * Achieved using Pytorch implementation 
 * the second result achieved using real-imagenet-labels (validation only)
 
+#### ImageNet Result:  
+SimpleNet outperforms much deeper and larger architectures on the ImageNet dataset:
+
+|      **Model**      | **Params**  | **Top1**  | **Top5**  |
+| :---------------   | :--------:  | :-------: | :------: |
+| AlexNet             |  60M        | 57.2      | 80.3     |
+| SqeezeNet           |  1.2M       | 58.18     | 80.62    |
+| VGGNet16        	  |  138M       | 71.59     | 90.38    |
+| VGGNet16_BN      	  |  138M       | 73.36     | 91.52    |
+| VGGNet19        	  |  143M       | 72.38     | 90.88    |
+| VGGNet19_BN         |  143M       | 74.22     | 91.84    |
+| GoogleNet           |  6.6M       | 69.78     | 89.53    |
+| WResNet18           |  11.7M      | 69.60     | 89.07    |
+| ResNet18        	  |  11.7M      | 69.76     | 89.08    |
+| ResNet34        	  |  21.8M      | 73.31     | 91.42    |
+| **SimpleNet_small_050** |  **1.5M**       | **61.67**     | **83.49**    |
+| **SimpleNet_small_075** |  **3.2M**       | **68.51**     | **88.15**    |
+| **SimpleNet_5m**        |  **5.7M**       | **72.03**     | **90.32**    |
+| **SimpleNet_9m**        |  **9.5M**       | **74.23**     | **91.75**    |
 
 #### Extended ImageNet Result:  
 
@@ -59,7 +77,8 @@ ImageNet result below was achieved using the [Pytorch implementation](https://gi
 
 SimpleNet performs very decently, it outperforms VGGNet, variants of ResNet and MobileNets(1-3)   
 and is pretty fast as well! and its all using plain old CNN!.    
-For benchmark results [look here](https://github.com/Coderx7/SimpleNet_Pytorch/tree/master/ImageNet/training_scripts/imagenet_training/results) 
+For benchmark results [look at the Pytorch implementation page](https://github.com/Coderx7/SimpleNet_Pytorch/tree/master/ImageNet/training_scripts/imagenet_training/results) 
+
 
 #### Top CIFAR10/100 results:
 
@@ -119,18 +138,6 @@ achieved using an ensemble or extreme data-augmentation
 
 
 
-#### ImageNet2012 results:
-
-| **Method**         | **T1/T5 Accuracy Rate** |
-| :----------------- | :---------------------: |
-| AlexNet(60M)       |        57.2/80.3        |
-| VGGNet16(138M)     |          70.5           |
-| GoogleNet(8M)      |          68.7           |
-| Wide ResNet(11.7M) |       69.6/89.07        |
-| **SimpleNet(9.5M)**  | **74.17 / 81.24***  |
-| **SimpleNet(5.7M)**  | **71.94 / 79.12***  |
-
-
 Table 6-Slimmed version Results on Different Datasets
 
 | **Model** | **Ours** | **Maxout** | **DSN** | **ALLCNN** | **dasNet** | **ResNet(32)** | **WRN** | **NIN** |
@@ -176,7 +183,7 @@ Table 6-Slimmed version Results on Different Datasets
 | Recurrent CNN for Object Recognition    |    92.91     |      \-      |
 | RCNN-160                                |    92.91     |      \-      |
 | SimpleNet-Arch1                         |    94.75     |     5.4m     |
-| SimpleNet-Arch1 using data augmentation |    95.32     |     5.4m     |
+| SimpleNet-Arch1 using data augmentation |    95.51     |     5.4m     |
 
 #### CIFAR100 Extended results:
 
@@ -195,7 +202,7 @@ Table 6-Slimmed version Results on Different Datasets
 | WRN                                       |  77.11/79.5  |
 | Highway                                   |    67.76     |
 | FitNet                                    |    64.96     |
-| SimpleNet                                 |    77.83     |
+| SimpleNet                                 |    78.37     |
 
 
 
