@@ -48,7 +48,6 @@ ImageNet result below was achieved using the [Pytorch implementation](https://gi
 | SVHN       | 98.21    |
 
 * Achieved using Pytorch implementation 
-* the second result achieved using real-imagenet-labels (validation only)
 
 #### ImageNet Result:  
 SimpleNet outperforms much deeper and larger architectures on the ImageNet dataset:
